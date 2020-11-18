@@ -20,8 +20,10 @@
 \newcommand{\btVFill}{\vskip0pt plus 1filll}
 
 %Information to be included in the title page:
-\title{92586 Computational Linguistics}
-\subtitle{Lesson 0. Introduction}
+\title{DIT gentle introduction to Python\\
+1st Edition, November 2020\\
+}
+\subtitle{2. Python 4 Poets}
 \author{Alberto Barr\'on-Cede\~no}
 \institute[DIT--UniBO]{Alma Mater Studiorum-Universit\`a di Bologna \\
 \texttt{a.barron@unibo.it\hspace{10mm}@\_albarron\_}
@@ -44,30 +46,7 @@
 
 
 \begin{frame}
-\frametitle{Table of Contents}
-\tableofcontents
-\end{frame}
-
-
-\begin{frame}
-\frametitle{From Unix to Python}
-
-\begin{itemize}
-  \item Kenneth W.\ Church's \alert{Unix for poets}
-\end{itemize}
-\end{frame}
-
-
-
-\begin{frame}
-\section{Introduction}
-\centering
-\alert{Introduction}
-\end{frame}
-
-\begin{frame}
-\frametitle{Introduction}
-\framesubtitle{Programming}
+\frametitle{Programming}
 \vspace{5mm}
 
 \begin{center}
@@ -79,9 +58,65 @@
 Diagram borrowed from L. Moroney's Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning
 \end{frame}
 
+\begin{frame}
+\frametitle{Conditionals}
+\vspace{5mm}
+\begin{center}
+ \includegraphics[width=4cm]{img/if_else_statement.jpg}
+\end{center}
+
+\btVFill
+\footnotesize
+Diagram borrowed from \url{https://www.tutorialspoint.com}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Loops}
+\vspace{5mm}
+\begin{center}
+ \includegraphics[width=4cm]{img/loop_architecture.jpg}
+\end{center}
+
+\btVFill
+\footnotesize
+Diagram borrowed from \url{https://www.tutorialspoint.com}
+\end{frame}
+
 \begin{frame}[fragile]
-\frametitle{Introduction}
-\framesubtitle{A simple method to \textit{salute} people}
+\frametitle{Functions (methods)}
+\vspace{5mm}
+
+\begin{block}{}
+\begin{verbatim}
+
+def name_of_the_function(input1, input2):
+    function code
+    
+   
+\end{verbatim}
+\end{block}
+\pause 
+
+\begin{block}{}
+\begin{verbatim}
+name_of_the_function("hi", "ho")
+\end{verbatim}
+\end{block}
+\pause 
+
+\begin{block}{}
+\begin{verbatim}
+name_of_the_function(hi, ho)
+
+\end{verbatim}
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{A simple method to \textit{salute} people}
 \vspace{5mm}
 
 \begin{block}{}
@@ -98,6 +133,12 @@ def generate_greeting_response(input):
             return random.choice(greeting_responses)
 \end{verbatim}
 \end{block}
+\pause
+
+\begin{itemize}
+ \item greeting\_inputs is a \alert{set}
+ \item greeting\_responses is a \alert{list}
+\end{itemize}
 
 \onslide
 \footnotesize
@@ -105,11 +146,57 @@ Derived from
 \url{https://stackabuse.com/python-for-nlp-creating-a-rule-based-chatbot/}
 \end{frame}
 
+\begin{frame}[fragile]
+\frametitle{A simple method to \textit{salute} people}
+\vspace{5mm}
+
+\begin{block}{}
+\begin{verbatim}
+greeting_inputs = ("hey", "morning", "evening", "hi",
+                "whatsup", "hello")
+greeting_responses = ["hey", "hey hows you?", "*nods*",
+                "hello, how you doing", "hello",
+                "Welcome, I am good and you"]
+
+def generate_greeting_response(input):
+    for token in input.split():
+        if token.lower() in greeting_inputs:
+            return random.choice(greeting_responses)
+\end{verbatim}
+\end{block}
+\pause
+
+\begin{block}{}
+\begin{verbatim}
+generate_greeting_response("hi")
+\end{verbatim}
+\end{block}
+\pause 
+
+\begin{block}{}
+\begin{verbatim}
+generate_greeting_response("ciao")
+
+\end{verbatim}
+\end{block}
+
+
+\end{frame}
+
+
 
 \begin{frame}
-\centering
-\alert{Unix for Poets}
+
+\frametitle{From Unix to Python}
+
+\begin{itemize}
+  \item Kenneth W.\ Church's \alert{Unix for poets}
+\end{itemize}
 \medskip
+\pause
+
+\centering
+% \alert{Unix for Poets}
 
 $\downarrow$
 \medskip
@@ -127,11 +214,4 @@ $\downarrow$
 \end{frame}
 
 
-
-
-\begin{frame}
-\frametitle{References}
-\bibliographystyle{humannat}
-\bibliography{coli}
-\end{frame}
 \end{document}
