@@ -11,5 +11,8 @@ Module 2. Python for Poets
 
 Module 3. Data structures, methods, and classes
 
-Course Timing: November 4th, 18th, and 25th, 2020; 14.00 to 16.00 CET
-Event Address: Zoom
+Course Timing: 
+- November 4th and 18th, 2020;  14:00 to 16:00 CET
+- November 25th, 2020; 13:30 to 15:30 CET
+
+Event Address: UniBO MS Teams
