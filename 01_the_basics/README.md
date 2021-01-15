@@ -8,4 +8,4 @@
 
 1.2.2 Basic operations
 
-The slides for module 1.2 are here. Follow this [link](https://colab.research.google.com/drive/1-WpX_L4wBaPfbZApkhhtwo7j1yG49JNF?usp=sharing) for the jupyter notebook.
+The slides for module 1.2 are here. Follow this [link](https://colab.research.google.com/drive/1-WpX_L4wBaPfbZApkhhtwo7j1yG49JNF?usp=sharing) for the jupyter notebook. The lesson is available [here](https://youtu.be/Omp72RoNdU0)
