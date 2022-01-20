@@ -11,4 +11,4 @@
 The slides for module 1.2 are here. The jupyter notebook is up here (and you can import it on [colab](https://colab.research.google.com). 
 
 
-The lesson, different, as given in the 2020 edition, is available [here](https://youtu.be/Omp72RoNdU0)
+The lesson, as given in the 2020 edition, is available [here](https://youtu.be/Omp72RoNdU0)
