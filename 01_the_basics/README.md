@@ -8,4 +8,7 @@
 
 1.2.2 Basic operations
 
-The slides for module 1.2 are here. Follow this [link](https://colab.research.google.com/drive/1-WpX_L4wBaPfbZApkhhtwo7j1yG49JNF?usp=sharing) for the jupyter notebook. The lesson is available [here](https://youtu.be/Omp72RoNdU0)
+The slides for module 1.2 are here. The jupyter notebook is up here (and you can import it on [colab](https://colab.research.google.com). 
+
+
+The lesson, different, as given in the 2020 edition, is available [here](https://youtu.be/Omp72RoNdU0)
