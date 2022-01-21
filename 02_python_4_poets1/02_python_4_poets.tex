@@ -8,6 +8,7 @@
 \usecolortheme{seagull}
 
 \usepackage{natbib}
+\usepackage{pythonhighlight}
 
 % \AtBeginSection[]
 % {
@@ -21,7 +22,7 @@
 
 %Information to be included in the title page:
 \title{DIT gentle introduction to Python\\
-1st Edition, November 2020\\
+2nd Edition, February 2022\\
 }
 \subtitle{2. Python 4 Poets}
 \author{Alberto Barr\'on-Cede\~no}
@@ -30,7 +31,7 @@
 }
 
 
-\date{18/11/2020}
+\date{08/02/2022}
 
 % logo of my university
 \titlegraphic{%\includegraphics[width=2cm]{img/unibo_forli.png}\hspace*{4.75cm}
@@ -85,32 +86,31 @@ Diagram borrowed from \url{https://www.tutorialspoint.com}
 
 \begin{frame}[fragile]
 \frametitle{Functions (methods)}
-\vspace{5mm}
 
-\begin{block}{}
-\begin{verbatim}
+A simple function
+\begin{python}
+  def name_of_the_function(input1, input2):
+      # function code
+      none
+\end{python}
+\pause
 
-def name_of_the_function(input1, input2):
-    function code
-    
-   
-\end{verbatim}
-\end{block}
-\pause 
-
-\begin{block}{}
-\begin{verbatim}
+Calling the function
+\begin{python}
 name_of_the_function("hi", "ho")
-\end{verbatim}
-\end{block}
-\pause 
+\end{python}
+\pause
 
-\begin{block}{}
-\begin{verbatim}
+Another valid call
+\begin{python}
 name_of_the_function(hi, ho)
+\end{python}
+\pause
 
-\end{verbatim}
-\end{block}
+An invalid call
+\begin{python}
+name_of_the_function(hi)
+\end{python}
 
 \end{frame}
 
@@ -119,8 +119,7 @@ name_of_the_function(hi, ho)
 \frametitle{A simple method to \textit{salute} people}
 \vspace{5mm}
 
-\begin{block}{}
-\begin{verbatim}
+\begin{python}
 greeting_inputs = ("hey", "morning", "evening", "hi",
                 "whatsup", "hello")
 greeting_responses = ["hey", "hey hows you?", "*nods*",
@@ -131,13 +130,12 @@ def generate_greeting_response(input):
     for token in input.split():
         if token.lower() in greeting_inputs:
             return random.choice(greeting_responses)
-\end{verbatim}
-\end{block}
+\end{python}
 \pause
 
 \begin{itemize}
- \item greeting\_inputs is a \alert{set}
- \item greeting\_responses is a \alert{list}
+ \item \pyth{greeting_inputs} is a \alert{set}
+ \item \pyth{greeting_responses} is a \alert{list}
 \end{itemize}
 
 \onslide
@@ -150,8 +148,7 @@ Derived from
 \frametitle{A simple method to \textit{salute} people}
 \vspace{5mm}
 
-\begin{block}{}
-\begin{verbatim}
+\begin{python}
 greeting_inputs = ("hey", "morning", "evening", "hi",
                 "whatsup", "hello")
 greeting_responses = ["hey", "hey hows you?", "*nods*",
@@ -162,35 +159,26 @@ def generate_greeting_response(input):
     for token in input.split():
         if token.lower() in greeting_inputs:
             return random.choice(greeting_responses)
-\end{verbatim}
-\end{block}
+\end{python}
 \pause
 
-\begin{block}{}
-\begin{verbatim}
+\begin{python}
 generate_greeting_response("hi")
-\end{verbatim}
-\end{block}
-\pause 
+\end{python}
+\pause
 
-\begin{block}{}
-\begin{verbatim}
+\begin{python}
 generate_greeting_response("ciao")
-
-\end{verbatim}
-\end{block}
-
+\end{python}
 
 \end{frame}
 
-
-
 \begin{frame}
-
 \frametitle{From Unix to Python}
 
 \begin{itemize}
-  \item Kenneth W.\ Church's \alert{Unix for poets}
+  \item Kenneth W.\ Church's \alert{Unix for poets}%
+  \footnote{\url{https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf}}
 \end{itemize}
 \medskip
 \pause
