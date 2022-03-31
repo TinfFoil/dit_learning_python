@@ -20,4 +20,5 @@ Course Timing:
 
 Event Address: UniBO MS Teams
 
-If time allows, a last module "Data structures, methods, and classes" will be covered during the last session.
+A fourth module on "Data structures, methods, and classes" could be offered on demand later, but with restricted access.
+Only students who submit the exercises proposed during the three sessions could join.
