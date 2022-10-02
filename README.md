@@ -8,9 +8,11 @@ or any other programming loanguage.
 
 [Module 1](https://github.com/TinfFoil/learning_dit_python/tree/main/01_the_basics). The basics
 
-[Module 2](https://github.com/TinfFoil/learning_dit_python/tree/main/02_python_4_poets1). Python for Poets (1 of 2)
+[Module 2](https://github.com/TinfFoil/learning_dit_python/tree/main/02_python_data). Data
 
-[Module 3](https://github.com/TinfFoil/learning_dit_python/tree/main/03_python_4_poets2). Python for Poets (2 of 2)
+[Module 2](https://github.com/TinfFoil/learning_dit_python/tree/main/03_python_4_poets1). Python for Poets (1 of 2)
+
+[Module 3](https://github.com/TinfFoil/learning_dit_python/tree/main/04_python_4_poets2). Python for Poets (2 of 2)
 
 
 Course Timing: 
