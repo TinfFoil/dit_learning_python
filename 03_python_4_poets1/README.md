@@ -1,4 +1,4 @@
-# Module 2. Python for Poets, first part
+# Module 3. Python for Poets, first part
 
 This is the second session of the 2022 edition of DIT introduction to Python.
 
