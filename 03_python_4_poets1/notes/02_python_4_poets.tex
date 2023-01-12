@@ -1,14 +1,28 @@
-\documentclass{beamer}
+% \documentclass{beamer}
+% \usetheme{Boadilla}
 
-\usepackage[utf8]{inputenc}
+% to get the handout
+\documentclass[handout]{beamer}
+\usepackage{pgfpages}
+\pgfpagesuselayout{4 on 1}[a4paper,landscape, border shrink=5mm]
+\pgfpageslogicalpageoptions{1}{border code=\pgfusepath{stroke}}
+\pgfpageslogicalpageoptions{2}{border code=\pgfusepath{stroke}}
+\pgfpageslogicalpageoptions{3}{border code=\pgfusepath{stroke}}
+\pgfpageslogicalpageoptions{4}{border code=\pgfusepath{stroke}}
 \usetheme{default}
 
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{natbib}
+\usepackage{amsfonts}	% for matrices
+\usepackage{amsmath}
+\usepackage{lipsum}	% used for the unnumbered footnotes
+\usepackage[makeroom]{cancel}
+\usepackage{tabularx}
+\usepackage{pythonhighlight}
 
-\usetheme{Boadilla}
 \usecolortheme{seagull}
 
-\usepackage{natbib}
-\usepackage{pythonhighlight}
 
 % \AtBeginSection[]
 % {
@@ -17,21 +31,20 @@
 %     \tableofcontents[currentsection]
 %   \end{frame}
 % }
-
+\newcommand{\light}[1]{\textcolor{gray}{#1}}
 \newcommand{\btVFill}{\vskip0pt plus 1filll}
 
 %Information to be included in the title page:
 \title{DIT gentle introduction to Python\\
-2nd Edition, February 2022\\
-}
-\subtitle{2. Python 4 Poets}
+2. Python 4 Poets}
+\subtitle{v2.2 (PhD) January 2023}
 \author{Alberto Barr\'on-Cede\~no}
 \institute[DIT--UniBO]{Alma Mater Studiorum-Universit\`a di Bologna \\
 \texttt{a.barron@unibo.it\hspace{10mm}@\_albarron\_}
 }
 
 
-\date{08/02/2022}
+\date{18/01/2022}
 
 % logo of my university
 \titlegraphic{%\includegraphics[width=2cm]{img/unibo_forli.png}\hspace*{4.75cm}
@@ -56,38 +69,36 @@
 
 \btVFill
 \footnotesize
-Diagram borrowed from L. Moroney's Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning
+\light{Diagram borrowed from L. Moroney's Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning}
 \end{frame}
 
 \begin{frame}
-\frametitle{Conditionals}
+\frametitle{Conditionals and Loops}
 \vspace{5mm}
-\begin{center}
+
+\begin{columns}
+\begin{column}{0.4\textwidth}
+ \begin{center}
  \includegraphics[width=4cm]{img/if_else_statement.jpg}
 \end{center}
-
-\btVFill
-\footnotesize
-Diagram borrowed from \url{https://www.tutorialspoint.com}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Loops}
-\vspace{5mm}
-\begin{center}
+\end{column}					\pause 
+\begin{column}{0.4\textwidth}
+ \begin{center}
  \includegraphics[width=4cm]{img/loop_architecture.jpg}
 \end{center}
+\end{column}
+\end{columns}
 
 \btVFill
+\onslide
 \footnotesize
-Diagram borrowed from \url{https://www.tutorialspoint.com}
+\light{Diagrams borrowed from \url{https://www.tutorialspoint.com}}
 \end{frame}
 
 \begin{frame}[fragile]
 \frametitle{Functions (methods)}
 
-A simple function
+\textbf{A simple function}
 \begin{python}
   def name_of_the_function(input1, input2):
       # function code
@@ -95,19 +106,19 @@ A simple function
 \end{python}
 \pause
 
-Calling the function
+\textbf{Calling the function}
 \begin{python}
 name_of_the_function("hi", "ho")
 \end{python}
 \pause
 
-Another valid call
+\textbf{Another valid call}
 \begin{python}
 name_of_the_function(hi, ho)
 \end{python}
 \pause
 
-An invalid call
+\textbf{An invalid call}
 \begin{python}
 name_of_the_function(hi)
 \end{python}
@@ -140,8 +151,8 @@ def generate_greeting_response(input):
 
 \onslide
 \footnotesize
-Derived from
-\url{https://stackabuse.com/python-for-nlp-creating-a-rule-based-chatbot/}
+\light{Derived from
+\url{https://stackabuse.com/python-for-nlp-creating-a-rule-based-chatbot/}}
 \end{frame}
 
 \begin{frame}[fragile]
