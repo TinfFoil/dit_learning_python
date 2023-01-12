@@ -6,4 +6,4 @@ The pdf file on top (produced with the [Latex](https://it.wikipedia.org/wiki/LaT
 
 You can download the notebook from here or import it on [colab](https://colab.research.google.com), as we did in the previous session. 
 
-The video-lesson from the first edition (different from the current one) is available [on youtube](https://youtu.be/AId7nQGZ-Sc).
+The video-lesson,  as given in the 2020 edition, is available [on youtube](https://youtu.be/AId7nQGZ-Sc).
