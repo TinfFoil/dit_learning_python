@@ -48,13 +48,13 @@
 
 %Information to be included in the title page:
 \title{DIT gentle introduction to Python}
-\subtitle{v 2.2 (PhD) January 2023}
+\subtitle{v 2.3 (PhD) January--February 2024}
 \author{Alberto Barr\'on-Cede\~no}
 \institute[DIT--UniBO]{Alma Mater Studiorum-Universit\`a di Bologna \\
 \texttt{a.barron@unibo.it\hspace{10mm}@\_albarron\_}
 }
 
-\date{16/01/2023}
+\date{29/01/2024}
 
 % logo of my university
 \titlegraphic{%\includegraphics[width=2cm]{img/unibo_forli.png}\hspace*{4.75cm}
@@ -84,7 +84,7 @@
 \frametitle{What is a programming language?}
 
 
-A programming language is \red{just another language}\ldots
+A programming language is \red{just a language}\ldots
 \medskip 					\pause 
 
 \begin{quote}
@@ -94,6 +94,9 @@ kinds of \red{output} [given an input]
 \begin{flushright}
 \footnotesize
  \light{\url{https://en.wikipedia.org/wiki/Programming_language}}
+ 
+ \light{(from an old version of the article; I don't like the current 
+definition)}
 \end{flushright}			\pause 
 
 \bigskip 
@@ -210,8 +213,9 @@ even$^*$}
 \alert{Silly (useless) solution:}
 
 \begin{itemize}
- \item Fill a bag with all even numbers and a second bag with all odd numbers
- \item Given an input number, look for it in both bags and return the label of 
+ \item Produce all possible even numbers and store them in \textit{box}  
+EVEN\@. Produce all possible odd numbers and store them \textit{box} ODD\@. 
+ \item Given an input number, look for it in both boxes return the label of 
 the one in which you found it
 \end{itemize}	
 
@@ -319,7 +323,7 @@ $^*$ language I ``speak'' (or ``spoke'' at some point in time)
 1995	& Java*			& Compiled, object-oriented	\\
 1995	& Javascript	&Just-in-time-compiled, object-oriented, WWW	\\
 1995	& PHP*			& Scripting, Web-oriented	\\
-2001	& V. Basic.NET	& Object-oriented, .NET framework	\\
+2001	& V\@. Basic.NET	& Object-oriented, .NET framework	\\
 2009	& Go			& Compiled, C-like (safer)	\\
 \hline
 \end{tabular}
@@ -348,7 +352,7 @@ Strong abstraction from the computer (hardware)
 No previous compilation into machine-level instructions necessary
 \bigskip 	\pause
 
-\alert{(Not-necessarily) object-oriented paradigm}
+\alert{(Not-necessarily) object-oriented}
 
 An object contains data (attributes) and procedures (methods)
 \end{frame}
@@ -368,7 +372,8 @@ text search and processing, file reading/modifying)	\pause
 \item Extendable with modules in compiled languages (e.g., C++)	\pause 
 \item Multi-platform (e.g., Mac OS X, GNU Linux, Unix, MS Windows)	\pause 
 \item Free: zero-cost to download/use; open-source license	\pause 
-\item Large and friendly community
+\item Large and friendly community		\pause 
+\item \textbf{Top alternative for deep learning}
 \end{itemize}
 \bigskip 
 
@@ -400,7 +405,7 @@ text search and processing, file reading/modifying)	\pause
 \frametitle{Python}
 \framesubtitle{Some ways to code/launch a python program}
 
-UNIX / GNU Linux / Windows terminal
+[UNIX , GNU Linux , MacOS , Windows] terminal
 
 \begin{center}
  \includegraphics[width=81mm]{img/python_on_konsole.png}
@@ -469,7 +474,7 @@ Our first jupyter notebook
 \begin{enumerate}
 \item Visit \url{https://colab.research.google.com}
 \item Click on Github
-\item Type \url{https://github.com/TinfFoil/learning_dit_python}
+\item Type (or paste) \url{https://github.com/TinfFoil/learning_dit_python}
 \item Press search
 \item Select 
 \alert{DIT\_python\_notebook\_1\_static.ipynb}
@@ -497,18 +502,50 @@ Our first jupyter notebook
 \centering
 \begin{tabular}{ll}\hline
 x = 5		& x is a variable	\\
-			& we assign values to a variable with = 	\\\hline	\pause 
+			& we assign values to a variable with = 	\\
+			& (aka store information)					\\\hline	\pause 
 
-x = 5		& is an integer	\\
-x = 5.5		& is a float	\\
-x = ‘ciao’	& is a string	\\
-x = “ciao”	& is also a string	\\
-x = ‘5’		& is \red{what?}	\\				\hline	\pause 
+x = 5		& x is an integer	\\
+x = 5.5		& x is a float	\\
+x = ‘ciao’	& x is a string	\\
+x = “ciao”	& x is also a string	\\
+x = ‘5’		& x is \red{what?}	\\				\hline	\pause 
  
 x  = x * 3	& we can apply operators to variables	\\
-			& we can assign the output to a variable	\\	\hline
+			& and (re-)assign the output to a variable	\\	\hline
 
 \end{tabular}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Baby Steps}
+\framesubtitle{What we know so far}
+
+\alert{Basic formatting}
+
+\begin{columns}
+\begin{column}{0.4\textwidth}
+\begin{python}
+# my code
+x = 0            
+while x < 50:
+	for i in range(x):  
+		print('x', end="")
+	print()
+	x += 1
+\end{python}
+\end{column}
+
+\begin{column}{0.55\textwidth}
+\begin{itemize}
+\item Comments start with \red{\#}
+\item A \red{line break} is enough to close an instruction (in Java or C, we 
+need \red{;})
+\item A \red{colon} opens a code snippet
+\item \red{Indentation is crucial}
+\end{itemize}
+\end{column}
+\end{columns}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -552,7 +589,7 @@ else:
 
 The code snippet will be executed during a number of iterations
 
-\red{Danger}: a loop could run forever if there is an error 
+\red{Danger}: a loop could run forever if there is a \textit{bug}
 
 \begin{columns}
 \begin{column}{0.4\textwidth}
@@ -572,37 +609,7 @@ while (condition):
 
 
 \end{frame}
-% 
-\begin{frame}[fragile]
-\frametitle{Baby Steps}
-\framesubtitle{What we know so far}
 
-\alert{Basic formatting}
-
-\begin{columns}
-\begin{column}{0.4\textwidth}
-\begin{python}
-# my code
-x = 0            
-while x < 50:
-	for i in range(x):  
-		print('x', end="")
-	print()
-	x += 1
-\end{python}
-\end{column}
-
-\begin{column}{0.55\textwidth}
-\begin{itemize}
-\item Comments start with \red{\#}
-\item A \red{line break} is enough to close an instruction (in Java or C, we 
-need \red{;})
-\item \red{Colon} opens a special code snippet
-\item \red{Indentation is crucial}
-\end{itemize}
-\end{column}
-\end{columns}
-\end{frame}
 
 \begin{frame}
 \frametitle{You know a lot already!}
