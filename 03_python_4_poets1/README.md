@@ -1,6 +1,6 @@
 # Module 3. Python for Poets, first part
 
-This is the second session of the 2022 edition of DIT introduction to Python.
+This is the second session of the 2024 edition of DIT introduction to Python.
 
 The pdf file on top (produced with the [Latex](https://it.wikipedia.org/wiki/LaTeX) file, also included on top) contains the few slides for this session, including the link to the notebook. The txt file is our *corpus* for the session.
 
