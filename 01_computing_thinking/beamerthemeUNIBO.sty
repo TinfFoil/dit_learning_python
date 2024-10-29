@@ -1,0 +1,87 @@
+\ProvidesPackage{beamerthemeUNIBO}
+
+
+\selectcolormodel{HTML}
+\mode<presentation>
+
+
+%\useinnertheme[shadow=false]{rounded}
+\useoutertheme{infolines}
+
+
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{enumerate items}[default]
+\setbeamertemplate{section in toc}{%
+	{\color{darkred}\inserttocsectionnumber.}~\inserttocsection}
+\setbeamertemplate{subsection in toc}{%
+	\hspace{1.2em}{\color{darkred!50}\rule[0.3ex]{3pt}{3pt}}~\inserttocsubsection\par}
+\setbeamertemplate{section in toc shaded}[default][20]	
+
+
+%%%%%%% Colours and fonts %%%%%%%
+
+\definecolor{ReLDIyellow}{HTML}{FDC10E}
+\definecolor{ReLDIlightgreen}{HTML}{A9D595}
+\definecolor{ReLDIdarkgreen}{HTML}{009778}
+\definecolor{ReLDIblack}{HTML}{303030}
+\definecolor{ReLDIred}{HTML}{ED1C24}
+\definecolor{ReLDIorange}{HTML}{F6891E}
+\definecolor{ReLDIlightblue}{HTML}{E1F2F7}
+\definecolor{ReLDIdarkblue}{HTML}{3D5AA9}
+\definecolor{ReLDIpurple}{HTML}{9A4098}
+\definecolor{darkred}{RGB}{187,46,41}
+% \definecolor{darkred}{RGB}{218,41,28}
+\definecolor{darkgray}{RGB}{83,86,90}
+
+
+\setbeamercolor{normal text}{fg=ReLDIblack,bg=white}
+\setbeamercolor{section in toc}{fg=ReLDIblack,bg=white}
+\setbeamercolor{alerted text}{fg=darkred}
+
+\setbeamercolor{title}{bg=,fg=white}
+\setbeamercolor{author}{fg=darkgray!10}
+\setbeamercolor{institute}{fg=darkgray!5}
+\setbeamercolor{date}{fg=darkgray!50}
+
+\setbeamercolor*{palette primary}{fg=darkred,bg=lightgray!40}
+\setbeamercolor*{palette secondary}{fg=ReLDIdarkblue,bg=lightgray}
+\setbeamercolor*{palette tertiary}{fg=lightgray!10,bg=darkred}
+
+\setbeamercolor{titlelike}{parent=palette primary,fg=darkred}
+
+\setbeamercolor{frametitle}{bg=lightgray!10,fg=darkred}
+\setbeamercolor{structure}{fg=darkred!50}
+\setbeamercolor{itemize item}{fg=darkred}
+\setbeamercolor{itemize subitem}{fg=darkred!50}
+\setbeamercolor{enumerate item}{fg=darkred}
+\setbeamercolor{enumerate subitem}{fg=darkred!50}
+\setbeamercolor{subsection in toc}{fg=ReLDIblack!60}
+
+\setbeamercolor*{separation line}{}
+\setbeamercolor*{fine separation line}{}
+
+
+\setbeamerfont{title}{size=\LARGE,series=\bf}
+
+
+
+%%%%%%% Special environments %%%%%%%
+
+% example environment
+\setbeamerfont{example title}{series=\bf}
+\setbeamercolor*{example body}{fg=white,bg=ReLDIblack}
+
+
+% block environment
+\setbeamercolor*{block body}{bg=lightgray!10,fg=ReLDIblack}
+\setbeamercolor*{block title}{fg=lightgray!10,bg=darkred}
+\setbeamerfont{block title}{series=\bf}
+
+% exampleblock environment
+\setbeamercolor*{block body}{bg=lightgray!10,fg=ReLDIblack}
+\setbeamercolor*{block title}{fg=lightgray!10,bg=darkred}
+\setbeamerfont{block title}{series=\bf}
+
+
+\mode
+<all>
