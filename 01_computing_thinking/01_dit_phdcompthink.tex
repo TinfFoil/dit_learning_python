@@ -1,16 +1,16 @@
 % to get the standard slides
-\documentclass[xcolor=x11names]{beamer}
-\usetheme{Boadilla}
+% \documentclass[xcolor=x11names]{beamer}
+% \usetheme{Boadilla}
 
 % to get the handout
-% \documentclass[xcolor=x11names,handout]{beamer}
-% \usepackage{pgfpages}
-% \pgfpagesuselayout{4 on 1}[a4paper,landscape, border shrink=5mm]
-% \pgfpageslogicalpageoptions{1}{border code=\pgfusepath{stroke}}
-% \pgfpageslogicalpageoptions{2}{border code=\pgfusepath{stroke}}
-% \pgfpageslogicalpageoptions{3}{border code=\pgfusepath{stroke}}
-% \pgfpageslogicalpageoptions{4}{border code=\pgfusepath{stroke}}
-% \usetheme{default}
+\documentclass[xcolor=x11names,handout]{beamer}
+\usepackage{pgfpages}
+\pgfpagesuselayout{4 on 1}[a4paper,landscape, border shrink=5mm]
+\pgfpageslogicalpageoptions{1}{border code=\pgfusepath{stroke}}
+\pgfpageslogicalpageoptions{2}{border code=\pgfusepath{stroke}}
+\pgfpageslogicalpageoptions{3}{border code=\pgfusepath{stroke}}
+\pgfpageslogicalpageoptions{4}{border code=\pgfusepath{stroke}}
+\usetheme{default}
 
 %\bibliographystyle{chicago}
 %\bibpunct[]{(}{)}{,}{a}{}{,}
@@ -44,8 +44,6 @@
 \newcommand{\yellow}[1]{\textcolor{yellow}{#1}}
 \newcommand{\red}[1]{\textcolor{red}{#1}}
 \newcommand{\orange}[1]{\textcolor{orange}{#1}}
-
-
 
 
 \newcommand*{\vcenteredhbox}[1]{\begingroup
@@ -82,7 +80,7 @@ head/foot}%
 	}
 	\makeatother
 
-\title[DIT, LM SpecTra]{\vspace{-2pt}\\
+\title[DIT, PhD]{\vspace{-2pt}\\
 \href{http://www.dit.unibo.it}{\includegraphics[width=30mm]{img/UNIBO_logo.png}
 } \\
 \vspace{6mm} {DIT PhD\\ Introduction to Computational Thinking and Programming} 
@@ -108,9 +106,23 @@ head/foot}%
 }
 
 \begin{frame}
+\frametitle{\textit{L'idonietà}}
+ 
+This activity includes two modules: Programming and Statistics
+\bigskip 
+
+You will submit your solution to a couple of problems/exercises from each 
+module
+\bigskip
+
+Details at due time
+\end{frame}
+
+\begin{frame}
 \frametitle{Table of Contents}
 \tableofcontents
 \end{frame}
+
 
 \begin{frame}
 \section{You and your instructor}
@@ -220,7 +232,7 @@ NLP Technologies for Gastronomy			\pause
 
 \begin{itemize}
  \item Internship at Dalhousie University (Halifax, Canada)
- \item 3+ peer-reviewed full papers published (two during his masters)
+ \item 4+ peer-reviewed full papers published (two during his masters)
 \end{itemize}						\pause 
 \bigskip
 
@@ -266,24 +278,6 @@ students
 \end{frame}
 
 \begin{frame}
-\frametitle{Research Centres}
-
-\begin{itemize}
- \item \alert{ALMA-AI} 
- 
- Alma Mater Research Center for Human-Centered Artificial Intelligence
- 
- \light{\url{https://centri.unibo.it/alma-ai}}
- \bigskip								\pause 
- 
- \item \alert{COLITEC}
- 
- Corpora, Linguistics and Technology
- \light{\url{https://centri.unibo.it/colitec}}
-\end{itemize}
-\end{frame}
-
-\begin{frame}
 \frametitle{Computing at DIT}
 \framesubtitle{Computing Power%
 \footnote{Dedicated to deep learning (training and out-of-the-box)}} 
@@ -320,7 +314,7 @@ Slides and code available at:
 
 \alert{Python 3} programming language
 
-We will use Google's Colab: \url{https://colab.research.google.com/}
+We will use Google's Colab: \url{https://colab.research.google.com}
 \bigskip 
 
 For (more) serious affairs, you could consider
@@ -330,7 +324,7 @@ For (more) serious affairs, you could consider
 	Pycharm\footnote{\url{https://www.jetbrains.com/pycharm/}},
 	Eclipse\footnote{\url{https://www.eclipse.org/}} \alert{or}
 	local Jupyter%
-	\footnote{\url{https://jupyter.org/}}
+\footnote{\url{https://jupyter.org/}}
 \end{enumerate}
 \end{frame}
 
@@ -390,12 +384,6 @@ Edsger W. Dijkstra%
 
 
 \begin{frame}
-\section{Computational Thinking according to the ACM}
-\centering
-\alert{Computational Thinking according to the ACM}
-\end{frame}
-
-\begin{frame}
 \frametitle{Computational Thinking}
 ``[Computational Thinking] represents a universally applicable attitude and
 skill set \alert{everyone}, not just computer scientists, would be eager to
@@ -423,13 +411,8 @@ Computational thinking confronts the riddle of machine intelligence:
 \alert{Some examples of each?}
 \bigskip 											\pause
 
-
 \item What is computable?
-
 \end{itemize}
-\bigskip
-
-\light{Episode to watch: Black Mirror's The entire history of you}
 \end{frame}
 
 \begin{frame}
@@ -640,6 +623,217 @@ How do \textit{standard \alert{computers}} win at chess?
 \bigskip
 \end{column}
 \end{columns}
+\end{frame}
+
+%  FROM LESSON 3
+\begin{frame}
+\frametitle{What computational thinking is and is not}
+\framesubtitle{Characteristics}
+
+\alert{Conceptualising, not programming}
+
+\begin{itemize}
+ \item Computer science is \alert{not} computer programming
+ \item Beyond ($\sim$beside) being able to program a computer
+ \item Thinking at multiple levels of abstraction
+\end{itemize}			\pause
+
+\alert{Fundamental skill}
+\begin{itemize}
+ \item A skill every human being must know to function in modern society
+\end{itemize}	\pause
+
+\alert{A way that humans, not computers, think}
+\begin{itemize}
+ \item A way humans solve problems
+ \item Not trying to get humans to think like computers
+\end{itemize}							\pause
+
+\centering
+\begin{tabular}{l}
+Computers are dull and boring		\\	\pause 
+Humans are clever and imaginative	\\	\pause  
+Humans make computers exciting		\\	\pause 
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+\frametitle{Computational Thinking: The three As}
+
+An iterative process based on three stages:
+
+\begin{description}
+	\item[\textbf{A}bstraction]	(Problem Formulation).
+		One attempts to conceptualize a problem verbally, e.g., by trying to 
+formulate a question such as ``How does gravity work?,'' or through visual 
+thinking, e.g., by drawing a diagram identifying objects and relationships
+		\pause
+
+	\item[\textbf{A}utomation]	(Solution Expression).
+	 	It is expressed in a non-ambiguous way so that the computer	can carry 
+it 
+out; e.g., through computer programming \light{(or through \textit{prompting}?)}
+		\pause
+
+	\item[\textbf{A}nalysis]  (Execution \& Evaluation).
+	The solution gets executed (by the computer) in ways that show the direct 
+consequences of one's own thinking. Visualisations could support the evaluation 
+of solutions
+\end{description}
+
+\onslide
+\flushright
+\footnotesize
+\citep{Repenning:16}
+\end{frame}
+
+% From lesson 4
+
+\begin{frame}
+\frametitle{Algorithm}
+
+An algorithm is\ldots 
+\bigskip
+
+\begin{description}
+ \item[Definition 1]
+A finite sequence of \alert{well-defined (computer-implementable) 
+instructions}, typically to solve a class of problems or to perform a 
+computation
+
+\begin{flushright}
+\url{https://en.wikipedia.org/wiki/Algorithm}
+\end{flushright}
+\bigskip 			\pause 
+
+\item[Definition 2]
+An explicit, precise, unambiguous, mechanically-executable sequence of 
+elementary instructions, usually intended to accomplish a specific purpose. 
+
+\begin{flushright}
+\citet[p. 1]{Erickson:19} 
+\end{flushright}
+\end{description}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Activity 2: The panino%
+\footnote{Since recipes are \textit{just} algorithms}
+}
+
+\alert{Problem:} Write the algorithm to prepare a \textit{panino}
+\end{frame}
+
+\begin{frame}
+\frametitle{Activity 6: The panino}
+
+\alert{My} algorithm to prepare a \textit{panino}%
+\footnote{Via Taranto from \url{https://ilpaninobologna.com}}	\pause 
+
+\textbf{Ingredients}: 
+
+bread $\bullet$ \textit{prosciutto crudo $\bullet$ pecorino di Pienza $\bullet$ 
+carciofini sott'olio}	\pause 
+\begin{enumerate}
+ \item Cut the bread into two halves horizontally		\pause 
+ \item Add three slices of \textit{prosciutto} on top of the bottom half	
+ 
+	* get sure not to go beyond the border of the bread			\pause 
+ \item Evenly distribute some slices of \textit{pecorino}		\pause
+ \item Add 3 pieces of \textit{carciofini}
+ 
+		* get sure not to get too much oil\pause
+ \item Put the top half of bread on top					\pause
+ \item Enjoy
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Activity 6: The panino}
+
+Possible \textit{issues} in \alert{your/my} recipes%
+\footnote{Keep in mind that this is a toy problem}
+\bigskip 
+
+\begin{itemize}
+ \item Under-specification?						\bigskip	\pause 
+ \item Lack of identification of the input?		\bigskip	\pause 
+ \item Imprecise identification of the problem?
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Describing Algorithms}
+
+The 4 components of an algorithm
+
+\begin{description}
+ \item[What:] A precise specification of the problem that the algorithm solves
+	\pause 
+ \item[How:] A precise description of the algorithm itself			\pause 
+ \item[Why:] A proof that the algorithm solves the problem it is supposed to 
+solve%
+\footnote{Not covered in this lesson}			\pause 
+ \item[How fast:] An analysis of the running time of the algorithm%
+\footnote{idem}
+\end{description}	\pause 
+
+\begin{itemize}
+ \item No particular development order				\pause 
+ \item Write for an audience; this is not intended for yourself \pause 
+ \item Write for people who is not as clever as you are%
+\footnote{For instance, yourself 6 months ago}
+\end{itemize}
+
+\onslide 
+From~\cite[p. 11]{Erickson:19}
+\end{frame}
+
+% From lesson 5
+\begin{frame}
+\frametitle{Natural vs Programming languages}
+
+\alert{Natural languages}
+
+\begin{itemize}
+\item An \textit{ordinary} language (e.g., Italian)
+\item Written or oral
+\item It has evolved naturally in humans, usually without specific and 
+deliberate planning%
+\footnote{Consider Klingon or Sith}
+\item \textit{Problem}: ambiguity
+
+(e.g., ``visiting relatives can be annoying'')
+\end{itemize}
+\pause
+
+\alert{Programming languages}
+\begin{itemize}
+\item Formal-born languages
+\item Specific syntactic rules that avoid ambiguous statements
+\item \textit{Sentences} convey one single meaning
+\item They can have a significant degree of abstraction
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Programming language}
+
+A formal language comprising a set of instructions that produce various kinds 
+of 
+output [given an input]%
+\footnote{\url{https://en.wikipedia.org/wiki/Programming_language}}
+\bigskip
+\pause
+
+\begin{center}
+\includegraphics[width=83mm]{img/02_programming.png}
+\end{center}
+\bigskip 
+
+\footnotesize \light{Diagram from L. Moroney's Introduction to TensorFlow for 
+Artificial Intelligence, Machine Learning, and Deep Learning}
 \end{frame}
 
 
