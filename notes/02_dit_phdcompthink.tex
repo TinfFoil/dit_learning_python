@@ -83,7 +83,7 @@ head/foot}%
 \title[DIT, PhD]{\vspace{-2pt}\\
 \href{http://www.dit.unibo.it}{\includegraphics[width=30mm]{img/UNIBO_logo.png}
 } \\
-\vspace{6mm} {DIT PhD\\ Introduction to Computational Thinking and Programming} 
+\vspace{6mm} {DIT PhD\\ Introduction to Computational Thinking and Programming}
 \\
 {\large Lesson 2. A Gentle Introduction to Python}
 % \\
@@ -93,7 +93,7 @@ head/foot}%
 \author[A. Barr\'on-Cede\~no]{{Alberto Barr\'on-Cede\~no \\ a.barron@unibo.it
 \vspace{-8mm}}
 \institute[DIT-UniBO]{DIT-UniBO}}
-\date[2025]{12/11/2025}
+\date[2026]{03/11/2026}
 
 \let\Tiny=\tiny
 
@@ -125,28 +125,28 @@ head/foot}%
 \frametitle{What is a programming language?}
 
 A programming language is \alert{just a language}\ldots
-\medskip 					\pause 
+\medskip 					\pause
 
 \begin{quote}
-A formal language comprising a set of \alert{instructions} that produce 
+A formal language comprising a set of \alert{instructions} that produce
 various kinds of \alert{output} [given an input]
 \end{quote}
 \begin{flushright}
 \footnotesize
  \light{\url{https://en.wikipedia.org/wiki/Programming_language}}
- 
- \light{(from an old version of the article; I don't like the current 
-definition)}
-\end{flushright}			\pause 
 
-\bigskip 
+ \light{(from an old version of the article; I don't like the current
+definition)}
+\end{flushright}			\pause
+
+\bigskip
 \begin{center}
 \includegraphics[width=100mm]{img/coli2020_diagrams_traditional_programming.png}
 \end{center}
 
 \btVFill
 \footnotesize
-\light{Diagram borrowed from L. Moroney's Introduction to TensorFlow for 
+\light{Diagram borrowed from L. Moroney's Introduction to TensorFlow for
 Artificial Intelligence, Machine Learning, and Deep Learning}
 
 \end{frame}
@@ -155,14 +155,14 @@ Artificial Intelligence, Machine Learning, and Deep Learning}
 \frametitle{What is a programming language?}
 
 \begin{quote}
-Programming languages are used in computer programming to implement an 
+Programming languages are used in computer programming to implement an
 \alert{algorithm}$^*$
 \end{quote}
 \begin{flushright}
 \footnotesize
  \light{\url{https://en.wikipedia.org/wiki/Programming_language}}
 \end{flushright}
-\pause 
+\pause
 
 \begin{columns}
 \begin{column}{0.4\textwidth}
@@ -170,13 +170,13 @@ Programming languages are used in computer programming to implement an
 \includegraphics[width=23mm]{img/1983_CPA_5426.png}
 \end{center}
 \footnotesize
-\light{1983 USSR stamp commemorating al-Khwārizmī's (approximate) 1200th 
+\light{1983 USSR stamp commemorating al-Khwārizmī's (approximate) 1200th
 birthday}
 \end{column}
 
 \begin{column}{0.55\textwidth}
 
-$^*$ derived from the 9th century Persian Mathematician Muhammad ibn Mūsā 
+$^*$ derived from the 9th century Persian Mathematician Muhammad ibn Mūsā
 al-Khwārizmī
 \vspace{10mm}
 \end{column}
@@ -200,7 +200,7 @@ al-Khwārizmī
 
 \alert{Ada Lovelace}%
 \footnote{Lord Byron’s daughter}
-(Mathematician) published the first algorithm for Charles Babbage’s 
+(Mathematician) published the first algorithm for Charles Babbage’s
 \alert{analytical engine}
 
 \begin{center}
@@ -211,7 +211,7 @@ al-Khwārizmī
 \end{columns}
 \end{frame}
 
- 
+
 \begin{frame}
 \section{Algorithms}
 \centering
@@ -222,7 +222,7 @@ al-Khwārizmī
 \frametitle{Algorithm}
 
 \begin{quote}
-A finite sequence of \alert{well-defined computer-implementable} instructions, 
+A finite sequence of \alert{well-defined computer-implementable} instructions,
 typically to solve a class of problems or to perform a computation
 \end{quote}
 \begin{flushright}
@@ -232,37 +232,37 @@ typically to solve a class of problems or to perform a computation
 \end{frame}
 
 \begin{frame}
-\frametitle{Algorithm Example: Find out if a number is odd or 
+\frametitle{Algorithm Example: Find out if a number is odd or
 even$^*$}
-\pause 
+\pause
 
 \alert{Definitions}
 
 \begin{itemize}
  \item A number is \alert{even} if it can be divided by 2 without remainder
  \item A number is \alert{odd} if it leaves a remainder when divided by 2
-\end{itemize}				\pause 
+\end{itemize}				\pause
 
 \alert{Examples}
 
 \begin{description}
- \item[Even numbers:] 2, 4, 6, 8, etc. 
+ \item[Even numbers:] 2, 4, 6, 8, etc.
  \item[Odd numbers:] 1, 3, 5, 7, etc.
-\end{description}			\pause 
+\end{description}			\pause
 
 \alert{Silly (useless) solution:}
 
 \begin{itemize}
- \item Produce all possible even numbers and store them in \textit{box}  
-EVEN\@. Produce all possible odd numbers and store them \textit{box} ODD\@. 
- \item Given an input number, look for it in both boxes return the label of 
+ \item Produce all possible even numbers and store them in \textit{box}
+EVEN\@. Produce all possible odd numbers and store them \textit{box} ODD\@.
+ \item Given an input number, look for it in both boxes return the label of
 the one in which you found it
-\end{itemize}	
+\end{itemize}
 
 \btVFill
 \onslide
 \footnotesize
-\light{$^*$Adapted from 
+\light{$^*$Adapted from
 \url{https://www.c-programming-simple-steps.com/algorithm-examples.html}}
 \end{frame}
 
@@ -276,7 +276,7 @@ the one in which you found it
 
 $\rightarrow$ an integer\,\,\,\,(data)
 
-$\leftarrow$ even or odd 	(more data)	\pause 
+$\leftarrow$ even or odd 	(more data)	\pause
 
 \bigskip
 \alert{Process}
@@ -288,10 +288,10 @@ A series of instructions and routines
 
 \begin{python}
 # n stores the number
-n = 5 
+n = 5
 if n%2 == 0:
  	print('even')
-else: 
+else:
  	print('odd')
 \end{python}
 
@@ -304,7 +304,7 @@ else:
 \centering
 \alert{Programming languages}
 \end{frame}
- 
+
 \begin{frame}
 \frametitle{History of (some) flagship languages (1/2)}
 
@@ -378,20 +378,20 @@ An object contains data (attributes) and procedures (methods)
 \framesubtitle{Some notable features}
 
 \begin{itemize}
-\item Elegant syntax (indentation-based) $\rightarrow$ easy to read	\pause 
-\item Simple and ideal for prototyping	\pause 
-\item It has a large standard library for diverse tasks (e.g., web servers, 
-text search and processing, file reading/modifying)	\pause 
-\item Interactive mode $\rightarrow$ continuous snippet testing	\pause 
-\item Extendable with modules in compiled languages (e.g., C++)	\pause 
-\item Multi-platform (e.g., Mac OS X, GNU Linux, Unix, MS Windows)	\pause 
-\item Free: zero-cost to download/use; open-source license	\pause 
-\item Large and friendly community		\pause 
+\item Elegant syntax (indentation-based) $\rightarrow$ easy to read	\pause
+\item Simple and ideal for prototyping	\pause
+\item It has a large standard library for diverse tasks (e.g., web servers,
+text search and processing, file reading/modifying)	\pause
+\item Interactive mode $\rightarrow$ continuous snippet testing	\pause
+\item Extendable with modules in compiled languages (e.g., C++)	\pause
+\item Multi-platform (e.g., Mac OS X, GNU Linux, Unix, MS Windows)	\pause
+\item Free: zero-cost to download/use; open-source license	\pause
+\item Large and friendly community		\pause
 \item Top alternative for deep learning
 \end{itemize}
-\bigskip 
+\bigskip
 
-\onslide 
+\onslide
 \light{\url{https://wiki.python.org/moin/BeginnersGuide/Overview}}
 \end{frame}
 
@@ -407,8 +407,8 @@ text search and processing, file reading/modifying)	\pause
  \item strings (both ASCII and Unicode)
  \item Lists
  \item Dictionaries
-\end{itemize}		\bigskip	\pause 
- 
+\end{itemize}		\bigskip	\pause
+
 \item It supports object-oriented programming	\bigskip
 
 \item Code can be grouped into modules and packages
@@ -436,14 +436,14 @@ Web browser: local, online, on Google's colab
  \includegraphics[width=101mm]{img/python_on_jupyter.png}
 \end{center}
 \end{frame}
- 
+
 % \begin{frame}
 % \frametitle{Python}
 % \framesubtitle{Some ways to code/launch a python program}
-% 
+%
 % From your web browser on DIT’s magamago (remotely online)%
 % \footnote{Open to advanced students only}
-% 
+%
 % \begin{center}
 %  \includegraphics[width=91mm]{img/python_on_magamago.png}
 % \end{center}
@@ -467,13 +467,13 @@ Web browser: local, online, on Google's colab
 \frametitle{Google’s colab}
 
 \begin{quote}
-a free Jupyter notebook environment that runs in the cloud and stores its 
+a free Jupyter notebook environment that runs in the cloud and stores its
 notebooks on Google Drive
 \end{quote}
 
 \begin{flushright}
 \light{\url{https://colab.research.google.com}}
-\end{flushright}				\pause 
+\end{flushright}				\pause
 
 \begin{center}
  \includegraphics[width=71mm]{img/jupyter_dit.png}
@@ -481,17 +481,19 @@ notebooks on Google Drive
 
 Our first jupyter notebook
 \end{frame}
- 
+
 \begin{frame}
 \frametitle{Google’s colab: baby steps}
 
 \begin{enumerate}
+\item Download the notebook for today's lesson
 \item Visit \url{https://colab.research.google.com}
-\item Click on Github
-\item Type (or paste) \url{https://github.com/TinfFoil/learning_dit_python}
-\item Press search
-\item Select 
-\alert{DIT\_python\_notebook\_1\_static.ipynb}
+% \item Click on Github
+% \item Type (or paste) \url{https://github.com/TinfFoil/learning_dit_python}
+% \item Press search
+% \item Select
+% \alert{DIT\_python\_notebook\_1\_static.ipynb}
+\item Upload the notebook
 \end{enumerate}
 
 \begin{center}
@@ -508,7 +510,7 @@ Our first jupyter notebook
 \begin{itemize}
 \item print() displays stuff to the screen
 \item input() captures information from the user
-\end{itemize}										\pause 
+\end{itemize}										\pause
 
 \alert{variables}
 \medskip
@@ -517,14 +519,14 @@ Our first jupyter notebook
 \begin{tabular}{ll}\hline
 x = 5		& x is a variable	\\
 			& we assign values to a variable with = 	\\
-			& (aka store information)					\\\hline	\pause 
+			& (aka store information)					\\\hline	\pause
 
 x = 5		& x is an integer	\\
 x = 5.5		& x is a float	\\
 x = ‘ciao’	& x is a string	\\
 x = “ciao”	& x is also a string	\\
-x = ‘5’		& x is \alert{what?}	\\\hline					\pause 
- 
+x = ‘5’		& x is \alert{what?}	\\\hline					\pause
+
 x  = x * 3	& we can apply operators to variables	\\
 			& and (re-)assign the output to a variable	\\	\hline
 
@@ -541,9 +543,9 @@ x  = x * 3	& we can apply operators to variables	\\
 \begin{column}{0.4\textwidth}
 \begin{python}
 # my code
-x = 0            
+x = 0
 while x < 50:
-	for i in range(x):  
+	for i in range(x):
 		print('x', end="")
 	print()
 	x += 1
@@ -553,7 +555,7 @@ while x < 50:
 \begin{column}{0.55\textwidth}
 \begin{itemize}
 \item Comments start with \alert{\#}
-\item A \alert{line break} is enough to close an instruction (in Java or C, we 
+\item A \alert{line break} is enough to close an instruction (in Java or C, we
 need \alert{;})
 \item A \alert{colon} opens a code snippet
 \item \alert{Indentation is crucial}
@@ -573,30 +575,30 @@ need \alert{;})
 \begin{python}
 if (condition):
 	print("a")
-elif (condition): 
+elif (condition):
 	print("b")
-else: 
+else:
 	print("c")
 \end{python}
 
 Only \alert{one} of these three snippets is executed
 
-\end{column}				\pause 
+\end{column}				\pause
 
 \begin{column}{0.4\textwidth}
 
 \begin{python}
 if (condition):
  	print("a")
-if (condition): 
+if (condition):
  	print("b")
-else: 
+else:
  	print("c")
 \end{python}
 \alert{How is this different?}
 \bigskip\medskip
 \end{column}
-\end{columns}			\pause 
+\end{columns}			\pause
 \bigskip
 
 \alert{flow control -- loops}
@@ -623,7 +625,7 @@ while (condition):
 
 
 \end{frame}
- 
+
 
 \begin{frame}
 \frametitle{You know a lot already!}
